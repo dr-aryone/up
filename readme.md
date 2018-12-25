@@ -32,6 +32,14 @@ This command uploads image(cutecats.png) and returns url of uploaded file https:
 
 [![https://asciinema.org/a/2sOXFrfJ3BezscGIQNuK4WcG5](https://asciinema.org/a/2sOXFrfJ3BezscGIQNuK4WcG5.png)](https://asciinema.org/a/2sOXFrfJ3BezscGIQNuK4WcG5)
 
+## Uninstall
+
+It's sad to see you go :(
+
+```sh
+$ npm uninstall -g @pavanjadhaw/up
+```
+
 ## Depends
 
 - [sprk-api](https://github.com/Sparkenstein/sprk) - api for this package
