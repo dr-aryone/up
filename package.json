@@ -1,0 +1,51 @@
+{
+  "name": "up",
+  "version": "0.0.1",
+  "description": "a fast and minimal command line wrapper for sprk api",
+  "author": "Pavan Jadhaw <@pavanjadhaw>",
+  "main": "cli.js",
+  "bin": {
+    "up": "cli.js"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "test": "xo"
+  },
+  "files": [
+    "cli.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavanjadhaw/up.git"
+  },
+  "keywords": [
+    "cli",
+    "sprk",
+    "file",
+    "uploader"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pavanjadhaw/up/issues"
+  },
+  "homepage": "https://github.com/pavanjadhaw/up#readme",
+  "dependencies": {
+    "form-data": "^2.3.3",
+    "got": "^9.5.0",
+    "meow": "^5.0.0",
+    "ora": "^3.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.15.3",
+    "xo": "^0.23.0"
+  },
+  "xo": {
+    "space": true,
+    "prettier": true,
+    "envs": [
+      "node"
+    ]
+  }
+}
