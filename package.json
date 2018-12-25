@@ -1,5 +1,5 @@
 {
-  "name": "up",
+  "name": "@pavanjadhaw/up",
   "version": "0.0.1",
   "description": "a fast and minimal command line wrapper for sprk api",
   "author": "Pavan Jadhaw <@pavanjadhaw>",
