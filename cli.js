@@ -65,7 +65,7 @@ process.on('SIGINT', () => {
         method: 'POST',
         headers: {
           'Content-Type': `multipart/form-data; boundary=${form._boundary}`,
-          'api-key': 'YHGAnr8kJUmPhjS30ilmd9mCTLQ6pAg0',
+          'api-key': apiKey,
         },
         body: form,
       });
