@@ -17,10 +17,6 @@ const cli = meow(
 `,
   {
     flags: {
-      init: {
-        type: 'boolean',
-        alias: 'i',
-      },
       help: {
         alias: 'h',
       },
