@@ -10,7 +10,7 @@
 ## Install
 
 ```sh
-$ npm install @pavanjadhaw/up
+$ npm i -g @pavanjadhaw/up
 ```
 
 Export sprk environment variables, add this to your .bashrc or .zshrc,
