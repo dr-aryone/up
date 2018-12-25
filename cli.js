@@ -48,6 +48,11 @@ if (!apiKey) {
   process.exit(1);
 }
 
+process.on('SIGINT', () => {
+  console.log('\n\nOperation aborted!');
+  process.exit(1);
+});
+
 (async () => {
   if (file) {
     const form = new FormData();
