@@ -60,28 +60,28 @@ process.on('SIGINT', () => {
 
     const spinner = ora(`Uploading ${file}…`).start();
 
-    got(domain, {
-      method: 'POST',
-      headers: {
-        'Content-Type': `multipart/form-data; boundary=${form._boundary}`,
-        'api-key': 'YHGAnr8kJUmPhjS30ilmd9mCTLQ6pAg0',
-      },
-      body: form,
-    })
-      .then(response => {
-        if (response.statusCode === 200) {
-          spinner.succeed(`File uploaded... ${response.body}`);
-        }
-      })
-      .catch(error => {
-        if (error.statusCode === 400)
-          spinner.fail('Bad request, often due to missing parameter.');
-        else if (error.statusCode === 401)
-          spinner.fail('No valid API key provided');
-        else if (error.statusCode === 404)
-          spinner.fail("The requested resource doesn't exists");
-        else spinner.fail('Unknown error', error.message);
+    try {
+      const response = await got(domain, {
+        method: 'POST',
+        headers: {
+          'Content-Type': `multipart/form-data; boundary=${form._boundary}`,
+          'api-key': 'YHGAnr8kJUmPhjS30ilmd9mCTLQ6pAg0',
+        },
+        body: form,
       });
+
+      if (response.statusCode === 200) {
+        spinner.succeed(`File uploaded... ${response.body}`);
+      }
+    } catch (error) {
+      if (error.statusCode === 400)
+        spinner.fail('Bad request, often due to missing parameter.');
+      else if (error.statusCode === 401)
+        spinner.fail('No valid API key provided');
+      else if (error.statusCode === 404)
+        spinner.fail("The requested resource doesn't exists");
+      else spinner.fail('Unknown error', error.message);
+    }
   } else {
     console.error('Specify a file to upload...');
     process.exit(1);
