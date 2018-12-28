@@ -54,7 +54,8 @@ process.on('SIGINT', () => {
       });
 
       if (response.statusCode === 200) {
-        spinner.succeed(`File uploaded... ${response.body}`);
+        spinner.stop();
+        console.log(`${response.body}`);
       }
     } catch (error) {
       if (error.statusCode === 400)
