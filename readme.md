@@ -31,7 +31,9 @@ $ up cutecats.png
 
 This command uploads image(cutecats.png) and returns url of uploaded file https://pwnj.pw/koyqd.png
 
-[![https://asciinema.org/a/2sOXFrfJ3BezscGIQNuK4WcG5](https://asciinema.org/a/2sOXFrfJ3BezscGIQNuK4WcG5.png)](https://asciinema.org/a/2sOXFrfJ3BezscGIQNuK4WcG5)
+<p align="center">
+  <img src="./demo.svg">
+</p>
 
 ## Install
 
