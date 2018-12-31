@@ -14,7 +14,8 @@
     "test": "xo"
   },
   "files": [
-    "cli.js"
+    "cli.js",
+    "config.js"
   ],
   "repository": {
     "type": "git",
