@@ -30,6 +30,7 @@ $ up cutecats.png
 ```
 
 This command uploads image(cutecats.png) and returns url of uploaded file https://pwnj.pw/koyqd.png
+and if you are dog person like [@spark](https://github.com/Sparkenstein) then here's [doggo](https://pwnj.pw/sijye.jpg) pic for ya.
 
 <p align="center">
   <img src="./demo.svg">
