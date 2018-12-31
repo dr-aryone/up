@@ -41,7 +41,7 @@ process.on('SIGINT', () => {
     const form = new FormData();
     form.append('file', createReadStream(file));
 
-    const spinner = ora(`Uploading ${file}…`).start();
+    const spinner = ora(`Uploading…`).start();
 
     try {
       const response = await got(domain, {
@@ -51,6 +51,8 @@ process.on('SIGINT', () => {
           'api-key': apiKey,
         },
         body: form,
+      }).on('uploadProgress', progress => {
+        spinner.text = `Uploading ${Math.round(progress.percent * 100)}%...`;
       });
 
       if (response.statusCode === 200) {
